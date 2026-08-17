@@ -1,0 +1,76 @@
+<h2 mat-dialog-title>
+  <mat-icon>request_quote</mat-icon>
+  {{ editando ? 'Editar cheque' : 'Datos del cheque' }}
+</h2>
+<mat-dialog-content>
+  <form [formGroup]="form" class="form">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Banco</mat-label>
+        <input matInput formControlName="banco" placeholder="Ej: Banco Nación" />
+        @if (form.controls.banco.invalid && form.controls.banco.touched) {
+          <mat-error>El banco es obligatorio</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>N° de cheque</mat-label>
+        <input matInput formControlName="numero" placeholder="Ej: 00012345" />
+        @if (form.controls.numero.invalid && form.controls.numero.touched) {
+          <mat-error>El número es obligatorio</mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Titular</mat-label>
+      <input matInput formControlName="titular" placeholder="Nombre y apellido en el cheque" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>N° de cuenta</mat-label>
+      <input matInput formControlName="numeroCuenta" placeholder="Ej: 100-200-3" />
+    </mat-form-field>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Emisión</mat-label>
+        <input matInput [matDatepicker]="emisor" formControlName="fechaEmision" />
+        <mat-datepicker-toggle matIconSuffix [for]="emisor"></mat-datepicker-toggle>
+        <mat-datepicker #emisor></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Vencimiento</mat-label>
+        <input matInput [matDatepicker]="vencedor" formControlName="fechaVencimiento" />
+        <mat-datepicker-toggle matIconSuffix [for]="vencedor"></mat-datepicker-toggle>
+        <mat-datepicker #vencedor></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Monto</mat-label>
+        <input matInput formControlName="monto" type="number" placeholder="0.00" />
+        @if (form.controls.monto.invalid && form.controls.monto.touched) {
+          <mat-error>El monto es obligatorio</mat-error>
+        }
+      </mat-form-field>
+
+      @if (editando) {
+        <mat-form-field appearance="outline">
+          <mat-label>Estado</mat-label>
+          <mat-select formControlName="estado">
+            @for (e of estados; track e.valor) {
+              <mat-option [value]="e.valor">{{ e.nombre }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      }
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button type="button" (click)="dialogRef.close()">Cancelar</button>
+  <button mat-flat-button type="button" (click)="guardar()">Guardar</button>
+</mat-dialog-actions>

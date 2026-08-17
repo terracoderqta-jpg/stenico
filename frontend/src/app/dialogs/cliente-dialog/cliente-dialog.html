@@ -1,0 +1,48 @@
+<h2 mat-dialog-title>{{ data ? 'Editar cliente' : 'Nuevo cliente' }}</h2>
+<mat-dialog-content>
+  <form [formGroup]="form" class="form">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" placeholder="Juan" />
+        @if (form.controls.nombre.invalid && form.controls.nombre.touched) {
+          <mat-error>El nombre es obligatorio</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Apellido</mat-label>
+        <input matInput formControlName="apellido" placeholder="Pérez" />
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email" placeholder="juan@correo.com" />
+      @if (form.controls.email.invalid && form.controls.email.touched) {
+        <mat-error>Ingrese un email válido</mat-error>
+      }
+    </mat-form-field>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Teléfono</mat-label>
+        <input matInput formControlName="telefono" placeholder="351-555-0100" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>CUIT</mat-label>
+        <input matInput formControlName="cuit" placeholder="20-30112233-4" />
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Dirección</mat-label>
+      <input matInput formControlName="direccion" placeholder="Av. Colón 123" />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button type="button" (click)="dialogRef.close()">Cancelar</button>
+  <button mat-flat-button type="button" (click)="guardar()">Guardar</button>
+</mat-dialog-actions>

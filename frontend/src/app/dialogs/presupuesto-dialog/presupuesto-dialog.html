@@ -1,0 +1,114 @@
+<div class="no-print barra">
+  <button mat-icon-button type="button" (click)="dialogRef.close()" matTooltip="Cerrar">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<div class="factura factura-print">
+  <div class="encabezado">
+    <div class="logo">
+      <img src="logo_stenico.png" alt="STENICO" class="logo-img" />
+      <span>STENICO</span>
+    </div>
+    <div class="nro">
+      <span>Presupuesto</span>
+      <strong>{{ presupuesto.nroPresupuesto }}</strong>
+    </div>
+  </div>
+
+  <div class="datos">
+    <div class="dato">
+      <span class="dato-label">Fecha</span>
+      <span class="dato-valor">{{ presupuesto.fecha | date: 'dd/MM/yyyy HH:mm' }}</span>
+    </div>
+    <div class="dato">
+      <span class="dato-label">Tipo</span>
+      <span class="dato-valor">{{ presupuesto.tipoVenta === 'REVENDEDOR' ? 'Revendedor' : 'Minorista' }}</span>
+    </div>
+    <div class="dato">
+      <span class="dato-label">Cliente</span>
+      <span class="dato-valor">{{ clienteNombre }}</span>
+    </div>
+    @if (presupuesto.diasVigencia) {
+      <div class="dato">
+        <span class="dato-label">Vigencia</span>
+        <span class="dato-valor">{{ presupuesto.diasVigencia }} días</span>
+      </div>
+    }
+    @if (clienteCuit) {
+      <div class="dato">
+        <span class="dato-label">CUIT</span>
+        <span class="dato-valor">{{ clienteCuit }}</span>
+      </div>
+    }
+    @if (clienteTelefono) {
+      <div class="dato">
+        <span class="dato-label">Teléfono</span>
+        <span class="dato-valor">{{ clienteTelefono }}</span>
+      </div>
+    }
+    @if (clienteDireccion) {
+      <div class="dato">
+        <span class="dato-label">Dirección</span>
+        <span class="dato-valor">{{ clienteDireccion }}</span>
+      </div>
+    }
+    @if (clienteEmail) {
+      <div class="dato">
+        <span class="dato-label">Email</span>
+        <span class="dato-valor">{{ clienteEmail }}</span>
+      </div>
+    }
+  </div>
+
+  @if (presupuesto.observaciones) {
+    <p class="observaciones"><span class="dato-label">Observaciones</span> {{ presupuesto.observaciones }}</p>
+  }
+
+  <hr class="separador" />
+
+  <table class="items">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Producto</th>
+        <th class="num">Cant.</th>
+        <th class="num">P. Unit.</th>
+        <th class="num">Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (d of presupuesto.detalles; track d.id) {
+        <tr>
+          <td>{{ d.producto.codigo }}</td>
+          <td>{{ d.producto.nombre }}</td>
+          <td class="num">{{ d.cantidad }}</td>
+          <td class="num">$ {{ d.precioUnitario | number: '1.2-2' }}</td>
+          <td class="num">$ {{ d.subtotal | number: '1.2-2' }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <hr class="separador" />
+
+  <div class="pie">
+    <div class="total-row">
+      <span>Total</span>
+      <strong>$ {{ presupuesto.total | number: '1.2-2' }}</strong>
+    </div>
+    <p class="leyenda">Presupuesto sin cargo.</p>
+  </div>
+</div>
+
+<div class="no-print acciones">
+  <button mat-button type="button" (click)="dialogRef.close()">Cerrar</button>
+  <button mat-stroked-button color="primary" type="button" (click)="guardarPdf()">
+    <mat-icon>save_alt</mat-icon>
+    Guardar PDF
+  </button>
+  <button mat-flat-button color="primary" type="button" (click)="imprimir()">
+    <mat-icon>print</mat-icon>
+    Imprimir
+  </button>
+</div>

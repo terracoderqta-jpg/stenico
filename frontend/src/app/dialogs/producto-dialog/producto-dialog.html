@@ -1,0 +1,86 @@
+<h2 mat-dialog-title>{{ data ? 'Editar producto' : 'Nuevo producto' }}</h2>
+<mat-dialog-content>
+  <form [formGroup]="form" class="form">
+    <mat-form-field appearance="outline">
+      <mat-label>Código</mat-label>
+      <input matInput formControlName="codigo" placeholder="P001" />
+      @if (form.controls.codigo.invalid && form.controls.codigo.touched) {
+        <mat-error>El código es obligatorio</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" placeholder="Nombre del producto" />
+      @if (form.controls.nombre.invalid && form.controls.nombre.touched) {
+        <mat-error>El nombre es obligatorio</mat-error>
+      }
+    </mat-form-field>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Marca</mat-label>
+        <input matInput formControlName="marca" placeholder="Pioneiro" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Categoría</mat-label>
+        <input matInput formControlName="categoria" placeholder="Baterías" />
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Subcategoría</mat-label>
+        <input matInput formControlName="subcategoria" placeholder="Moto" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Voltaje</mat-label>
+        <input matInput type="number" formControlName="voltaje" placeholder="12" />
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Largo (mm)</mat-label>
+        <input matInput type="number" formControlName="largo" placeholder="150" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Ancho (mm)</mat-label>
+        <input matInput type="number" formControlName="ancho" placeholder="87" />
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput formControlName="descripcion" rows="2"></textarea>
+    </mat-form-field>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Precio</mat-label>
+        <input matInput type="number" formControlName="precio" min="0" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Precio revendedor</mat-label>
+        <input matInput type="number" formControlName="precioRevendedor" min="0" placeholder="Opcional" />
+        <mat-hint>Precio para ventas a revendedores</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Stock</mat-label>
+      <input matInput type="number" formControlName="stock" min="0" />
+      @if (form.controls.stock.invalid && form.controls.stock.touched) {
+        <mat-error>El stock no puede ser negativo</mat-error>
+      }
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button type="button" (click)="dialogRef.close()">Cancelar</button>
+  <button mat-flat-button type="button" (click)="guardar()">Guardar</button>
+</mat-dialog-actions>

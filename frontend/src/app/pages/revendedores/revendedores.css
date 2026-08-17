@@ -1,0 +1,128 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.form-card {
+  max-width: 720px;
+}
+
+mat-card-header {
+  margin-bottom: 8px;
+}
+
+mat-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nombre {
+  flex: 2;
+  min-width: 240px;
+}
+
+.marca {
+  flex: 1;
+  min-width: 180px;
+}
+
+.pct {
+  flex: 1;
+  min-width: 140px;
+}
+
+.resumen {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #f2f1ec;
+  color: #444444;
+  font-size: 14px;
+}
+
+.resumen mat-icon {
+  font-size: 18px;
+  height: 18px;
+  width: 18px;
+  margin-top: 1px;
+}
+
+mat-card-actions {
+  padding: 0 16px 16px;
+}
+
+.cargando {
+  padding: 24px;
+  text-align: center;
+  color: #777777;
+}
+
+.error {
+  padding: 24px;
+  text-align: center;
+  color: #d32f2f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.preview-card {
+  margin-top: 20px;
+}
+
+.preview-scroll {
+  max-height: 440px;
+  overflow: auto;
+  border: 1px solid #e5e4df;
+  border-radius: 8px;
+}
+
+.tabla {
+  width: 100%;
+}
+
+.tabla th.mat-mdc-header-cell {
+  background: #f2f1ec;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tabla td.mat-mdc-cell,
+.tabla th.mat-mdc-header-cell {
+  padding: 10px 14px;
+  white-space: nowrap;
+}
+
+.tabla .final {
+  color: #0a7d40;
+  font-weight: 600;
+}
+
+.sin-resultados {
+  padding: 20px;
+  text-align: center;
+  color: #777777;
+}

@@ -1,0 +1,22 @@
+# IDE
+.idea/
+.vscode/
+
+# Backend
+backend/target/
+*.db
+
+# Frontend
+frontend/node_modules/
+frontend/.angular/
+frontend/dist/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.zip

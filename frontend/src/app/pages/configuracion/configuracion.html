@@ -1,0 +1,181 @@
+<div class="header">
+  <h1 class="page-title">Configuración</h1>
+</div>
+
+<mat-card class="ajuste-card">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-icon>price_change</mat-icon>
+      Ajuste de precios
+    </mat-card-title>
+    <mat-card-subtitle>
+      Aplicá aumentos o descuentos porcentuales a los productos. Usá valores negativos para descuentos.
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="campo">
+      <div class="label">Alcance</div>
+      <mat-radio-group [(ngModel)]="alcance" class="alcance">
+        <mat-radio-button value="total">Todos los productos</mat-radio-button>
+        <mat-radio-button value="marca">Solo por marca</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    @if (alcance === 'marca') {
+      <div class="campo">
+        <div class="label">Marca</div>
+        <mat-form-field appearance="outline" class="full">
+          <mat-label>Seleccionar marca</mat-label>
+          <mat-select [(ngModel)]="marca">
+            @for (m of marcas; track m) {
+              <mat-option [value]="m">{{ m }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+    }
+
+    <div class="row-pct">
+      <mat-form-field appearance="outline" class="pct">
+        <mat-label>Precio normal (%)</mat-label>
+        <input matInput type="number" step="0.01" [(ngModel)]="porcentajeNormal" />
+        <span matSuffix>%</span>
+        <mat-hint>Ej: 10 sube, -10 baja</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="pct">
+        <mat-label>Revendedor (% del precio normal)</mat-label>
+        <input matInput type="number" step="0.01" [(ngModel)]="porcentajeSobrePrecio" />
+        <span matSuffix>%</span>
+        <mat-hint>Ej: 75 = el revendedor paga 75% del precio</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="resumen">
+      <mat-icon>info</mat-icon>
+      <span>
+        Se ajustarán
+        <strong>{{ afectados }}</strong> producto(s)
+        @if (alcance === 'marca' && marca) {
+          de la marca <strong>{{ marca }}</strong>
+        }
+        @if (porcentajeNormal !== 0 || porcentajeSobrePrecio > 0) {
+          con
+          <strong>
+            normal {{ porcentajeNormal > 0 ? '+' : '' }}{{ porcentajeNormal }}%
+            @if (porcentajeSobrePrecio > 0) {
+              · revendedor {{ porcentajeSobrePrecio }}% del precio
+            }
+          </strong>
+        }
+        . Los precios se redondean a 2 decimales.
+      </span>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button
+      mat-flat-button
+      color="primary"
+      type="button"
+      [disabled]="aplicando || loading || error"
+      (click)="aplicar()"
+    >
+      <mat-icon>check</mat-icon>
+      @if (aplicando) {
+        Aplicando…
+      } @else {
+        Aplicar ajuste
+      }
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+@if (loading) {
+  <div class="cargando">Cargando productos…</div>
+} @else if (error) {
+  <div class="error">
+    No se pudieron cargar los productos.
+    <button mat-flat-button color="primary" (click)="cargar()">Reintentar</button>
+  </div>
+} @else {
+  <mat-card class="preview-card">
+    <mat-card-header>
+      <mat-card-title>
+        <mat-icon>visibility</mat-icon>
+        Vista previa del ajuste
+      </mat-card-title>
+      <mat-card-subtitle>
+        Productos con precio que serán ajustados en el alcance elegido.
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      @if (preview.length > 0) {
+        <div class="preview-scroll">
+          <table mat-table [dataSource]="preview" class="tabla-preview">
+            <ng-container matColumnDef="codigo">
+              <th mat-header-cell *matHeaderCellDef>Código</th>
+              <td mat-cell *matCellDef="let p">{{ p.codigo }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="nombre">
+              <th mat-header-cell *matHeaderCellDef>Nombre</th>
+              <td mat-cell *matCellDef="let p">{{ p.nombre }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="marca">
+              <th mat-header-cell *matHeaderCellDef>Marca</th>
+              <td mat-cell *matCellDef="let p">{{ p.marca || '—' }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="precio">
+              <th mat-header-cell *matHeaderCellDef>Precio</th>
+              <td mat-cell *matCellDef="let p">$ {{ p.precio | number: '1.0-2' }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="nuevoPrecio">
+              <th mat-header-cell *matHeaderCellDef>Nuevo precio</th>
+              <td mat-cell *matCellDef="let p" class="nuevo">
+                $ {{ nuevoPrecio(p) | number: '1.0-2' }}
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="revendedor">
+              <th mat-header-cell *matHeaderCellDef>Revendedor</th>
+              <td mat-cell *matCellDef="let p">
+                @if (tieneRevendedor(p)) {
+                  $ {{ p.precioRevendedor | number: '1.0-2' }}
+                } @else {
+                  —
+                }
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="nuevoRevendedor">
+              <th mat-header-cell *matHeaderCellDef>Nuevo revendedor</th>
+              <td mat-cell *matCellDef="let p" class="nuevo">
+                @if (porcentajeSobrePrecio > 0) {
+                  $ {{ nuevoRevendedor(p) | number: '1.0-2' }}
+                } @else if (tieneRevendedor(p)) {
+                  $ {{ nuevoRevendedor(p) | number: '1.0-2' }}
+                } @else {
+                  —
+                }
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="columnasPreview"></tr>
+            <tr mat-row *matRowDef="let row; columns: columnasPreview"></tr>
+          </table>
+        </div>
+      } @else {
+        <div class="sin-resultados">
+          No hay productos con precio en el alcance elegido.
+        </div>
+      }
+    </mat-card-content>
+  </mat-card>
+}
+ 

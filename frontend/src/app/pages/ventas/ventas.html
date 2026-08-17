@@ -1,0 +1,227 @@
+<div class="header">
+  <h1 class="page-title">Punto de venta</h1>
+</div>
+
+<div class="pos">
+  <section class="col-izq">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>person</mat-icon>
+          Cliente (opcional)
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field appearance="outline" class="full">
+          <mat-label>Buscar cliente</mat-label>
+          <input
+            matInput
+            [formControl]="clienteCtrl"
+            [matAutocomplete]="autoCliente"
+            placeholder="Nombre, apellido o CUIT"
+          />
+          @if (cliente) {
+            <button matSuffix mat-icon-button type="button" (click)="limpiarCliente()">
+              <mat-icon>close</mat-icon>
+            </button>
+          }
+          <mat-autocomplete
+            #autoCliente="matAutocomplete"
+            [displayWith]="mostrarCliente"
+            (optionSelected)="seleccionarCliente($event)"
+          >
+            @for (c of clientesFiltrados(); track c.id) {
+              <mat-option [value]="c">
+                <div class="opt">
+                  <span>{{ c.nombre }} {{ c.apellido }}</span>
+                  <small>{{ c.cuit }}</small>
+                </div>
+              </mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+
+        @if (cliente) {
+          <div class="cliente-chip">
+            <mat-icon>check_circle</mat-icon>
+            <span>
+              {{ cliente.nombre }} {{ cliente.apellido }} — {{ cliente.cuit }}
+              @if (cliente.direccion) {
+                · {{ cliente.direccion }}
+              }
+            </span>
+          </div>
+        } @else {
+          <p class="hint">Sin cliente seleccionado (venta al mostrador).</p>
+        }
+
+        <button mat-stroked-button color="primary" type="button" (click)="crearCliente()">
+          <mat-icon>person_add</mat-icon>
+          Nuevo cliente
+        </button>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>search</mat-icon>
+          Buscar producto
+        </mat-card-title>
+        <mat-card-subtitle>Hacé clic en un producto para agregarlo</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field appearance="outline" class="full">
+          <mat-label>Nombre, código o categoría</mat-label>
+          <input matInput [formControl]="busquedaCtrl" placeholder="Ej: Teclado, P001..." />
+        </mat-form-field>
+
+        <div class="resultados">
+          @for (p of productosVisibles(); track p.id) {
+            <button type="button" class="resultado" (click)="agregarProducto(p)">
+              <div class="res-info">
+                <span class="res-nombre">{{ p.nombre }}</span>
+                <span class="res-meta">
+                  {{ p.codigo }}
+                  @if (p.categoria) {
+                    · {{ p.categoria }}
+                  }
+                  · stock: {{ p.stock }}
+                  @if (esRevendedor && p.precioRevendedor) {
+                    · <span class="rev-tag">rev</span>
+                  } @else if (!esRevendedor && p.precioRevendedor) {
+                    · rev: ${{ p.precioRevendedor | number: '1.2-2' }}
+                  }
+                </span>
+              </div>
+              <span class="res-precio">$ {{ precioActivo(p) | number: '1.2-2' }}</span>
+              <mat-icon>add_circle</mat-icon>
+            </button>
+          } @empty {
+            @if (busquedaCtrl.value) {
+              <p class="empty">Sin productos que coincidan.</p>
+            } @else {
+              <p class="empty">Escribí para buscar un producto.</p>
+            }
+          }
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
+  <section class="col-der">
+    <mat-card class="carrito-card">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>shopping_cart</mat-icon>
+          Carrito
+          @if (carrito.length > 0) {
+            <span class="badge">{{ cantidadItems }}</span>
+          }
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="carrito-lista">
+        @for (linea of carrito; track linea.producto.id) {
+          <div class="linea">
+            <div class="l-info">
+              <span class="l-nombre">{{ linea.producto.nombre }}</span>
+              <span class="l-precio">$ {{ precioActivo(linea.producto) | number: '1.2-2' }}</span>
+            </div>
+            <mat-form-field appearance="outline" class="cant">
+              <mat-label>Cant.</mat-label>
+              <input
+                matInput
+                type="number"
+                min="1"
+                [max]="linea.producto.stock"
+                [ngModel]="linea.cantidad"
+                (ngModelChange)="actualizarLinea(linea, $event)"
+              />
+            </mat-form-field>
+            <span class="l-subtotal">$ {{ linea.subtotal | number: '1.2-2' }}</span>
+            <button mat-icon-button color="warn" type="button" (click)="quitarProducto(linea)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        } @empty {
+          <div class="empty-carrito">
+            <mat-icon>shopping_cart</mat-icon>
+            <p>Carrito vacío.</p>
+            <p class="hint">Buscá productos y hacé clic para agregarlos.</p>
+          </div>
+        }
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="cobro-card">
+      <mat-card-content>
+        <div class="tipo-venta">
+          <div class="section-title">
+            <mat-icon>local_offer</mat-icon>
+            Tipo de venta
+          </div>
+          <mat-button-toggle-group
+            [formControl]="tipoVentaCtrl"
+            (change)="cambiarTipoVenta()"
+            class="toggle-tipo"
+            aria-label="Tipo de venta"
+          >
+            <mat-button-toggle value="MINORISTA">
+              <mat-icon>storefront</mat-icon>
+              Minorista
+            </mat-button-toggle>
+            <mat-button-toggle value="REVENDEDOR">
+              <mat-icon>trending_up</mat-icon>
+              Revendedor
+            </mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+
+        <div class="cobro-grid">
+          <div>
+            <div class="section-title">
+              <mat-icon>calendar_today</mat-icon>
+              Fecha
+            </div>
+            <mat-form-field appearance="outline" class="full">
+              <input matInput [matDatepicker]="picker" [formControl]="fechaCtrl" />
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div>
+            <div class="section-title">
+              <mat-icon>payments</mat-icon>
+              Medio de cobro
+            </div>
+            <mat-radio-group [formControl]="pagoCtrl" class="pagos">
+              @for (m of metodosPago; track m.valor) {
+                <mat-radio-button [value]="m.valor">{{ m.nombre }}</mat-radio-button>
+              }
+            </mat-radio-group>
+            @if (pagoCtrl.value === 'CHEQUE') {
+              <p class="hint">Al cobrar se abrirá la pantalla para cargar los datos del cheque.</p>
+            }
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="total-bar">
+        <div class="total-info">
+          <span class="total-label">Total</span>
+          <span class="total">$ {{ total | number: '1.2-2' }}</span>
+        </div>
+        <button
+          mat-flat-button
+          color="primary"
+          type="button"
+          [disabled]="!puedeCobrar()"
+          (click)="cobrar()"
+          class="cobrar-btn"
+        >
+          <mat-icon>point_of_sale</mat-icon>
+          Cobrar y facturar
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+</div>

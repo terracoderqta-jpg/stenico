@@ -1,0 +1,94 @@
+<div class="header">
+  <h1 class="page-title">Cheques</h1>
+  <button mat-flat-button color="primary" (click)="abrirNuevo()">
+    <mat-icon>add</mat-icon>
+    Nuevo cheque
+  </button>
+</div>
+
+<div class="stats">
+  <mat-card>
+    <div class="stat">
+      <span class="stat-label">Cheques totales</span>
+      <span class="stat-value">{{ cheques.length }}</span>
+    </div>
+  </mat-card>
+  <mat-card>
+    <div class="stat">
+      <span class="stat-label">Pendientes de cobro</span>
+      <span class="stat-value">{{ cantidadPendientes }}</span>
+    </div>
+  </mat-card>
+  <mat-card class="stat-yellow">
+    <div class="stat">
+      <span class="stat-label">Monto pendiente</span>
+      <span class="stat-value">$ {{ montoPendiente | number: '1.2-2' }}</span>
+    </div>
+  </mat-card>
+</div>
+
+<mat-card>
+  <table mat-table [dataSource]="cheques" class="mat-elevation-z0">
+    <ng-container matColumnDef="cheque">
+      <th mat-header-cell *matHeaderCellDef>Cheque</th>
+      <td mat-cell *matCellDef="let c">
+        <div class="cheque-main">
+          <span class="factura">{{ c.numero }}</span>
+          <small>{{ c.banco }}</small>
+        </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="titular">
+      <th mat-header-cell *matHeaderCellDef>Titular</th>
+      <td mat-cell *matCellDef="let c">{{ c.titular || '—' }}</td>
+    </ng-container>
+    <ng-container matColumnDef="emision">
+      <th mat-header-cell *matHeaderCellDef>Emisión</th>
+      <td mat-cell *matCellDef="let c">{{ c.fechaEmision ? (c.fechaEmision | date: 'dd/MM/yyyy') : '—' }}</td>
+    </ng-container>
+    <ng-container matColumnDef="vencimiento">
+      <th mat-header-cell *matHeaderCellDef>Vencimiento</th>
+      <td mat-cell *matCellDef="let c">{{ c.fechaVencimiento ? (c.fechaVencimiento | date: 'dd/MM/yyyy') : '—' }}</td>
+    </ng-container>
+    <ng-container matColumnDef="monto">
+      <th mat-header-cell *matHeaderCellDef>Monto</th>
+      <td mat-cell *matCellDef="let c" class="total">$ {{ c.monto | number: '1.2-2' }}</td>
+    </ng-container>
+    <ng-container matColumnDef="estado">
+      <th mat-header-cell *matHeaderCellDef>Estado</th>
+      <td mat-cell *matCellDef="let c">
+        <span class="estado" [ngClass]="'estado-' + c.estado.toLowerCase()">
+          <mat-icon>{{ estadoIcono(c.estado) }}</mat-icon>
+          {{ estadoNombre(c.estado) }}
+        </span>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="venta">
+      <th mat-header-cell *matHeaderCellDef>Venta</th>
+      <td mat-cell *matCellDef="let c">{{ c.venta?.nroFactura || '—' }}</td>
+    </ng-container>
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let c">
+        @if (c.estado === 'PENDIENTE') {
+          <button mat-icon-button color="primary" (click)="marcarCobrado(c)" matTooltip="Marcar como cobrado">
+            <mat-icon>check_circle</mat-icon>
+          </button>
+        }
+        <button mat-icon-button color="primary" (click)="abrirEditar(c)" matTooltip="Editar">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="eliminar(c)" matTooltip="Eliminar">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnas"></tr>
+  </table>
+
+  @if (!loading && cheques.length === 0) {
+    <div class="empty">No hay cheques registrados.</div>
+  }
+</mat-card>

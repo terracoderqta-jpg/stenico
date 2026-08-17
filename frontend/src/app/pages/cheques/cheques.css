@@ -1,0 +1,115 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111111;
+  border-left: 4px solid #ffd100;
+  padding-left: 12px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #777777;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111111;
+}
+
+.stat-yellow {
+  border: 2px solid #ffd100;
+}
+
+mat-card {
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+}
+
+.cheque-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.cheque-main small {
+  color: #888888;
+}
+
+.factura {
+  font-weight: 700;
+  color: #b08c00;
+}
+
+.total {
+  font-weight: 700;
+}
+
+.estado {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.estado mat-icon {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.estado-pendiente {
+  background: #fef7e0;
+  color: #b08c00;
+}
+
+.estado-cobrado {
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+
+.estado-rechazado {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+.estado-cancelado {
+  background: #eeeeee;
+  color: #555555;
+}
+
+.empty {
+  padding: 24px;
+  text-align: center;
+  color: #777777;
+}

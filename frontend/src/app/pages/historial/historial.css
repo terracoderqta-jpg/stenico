@@ -1,0 +1,120 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111111;
+  border-left: 4px solid #ffd100;
+  padding-left: 12px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #777777;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111111;
+}
+
+mat-card {
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+}
+
+.factura {
+  font-weight: 700;
+  color: #b08c00;
+}
+
+.tipo {
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+
+.tipo-minorista {
+  background: #eeeeee;
+  color: #555555;
+}
+
+.tipo-revendedor {
+  background: #111111;
+  color: #ffd100;
+}
+
+.pago {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.pago mat-icon {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.pago-efectivo {
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+
+.pago-transferencia {
+  background: #e8f0fe;
+  color: #1a73e8;
+}
+
+.pago-tarjeta {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+.pago-cheque {
+  background: #fef7e0;
+  color: #b08c00;
+}
+
+.total {
+  font-weight: 700;
+}
+
+.empty {
+  padding: 24px;
+  text-align: center;
+  color: #777777;
+}
