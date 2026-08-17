@@ -3,7 +3,8 @@ services:
     name: stenico-backend
     runtime: image
     image:
-      url: Dockerfile
+      url: ./backend/Dockerfile
+    dockerContext: .
     disk:
       name: stenico-data
       mountPath: /data
