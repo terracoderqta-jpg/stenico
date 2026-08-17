@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: stenico-backend
+    name: stenico-api
     runtime: image
     image:
-      url: ./Dockerfile
+      url: Dockerfile
+    dockerContext: ./backend
     disk:
       name: stenico-data
       mountPath: /data
