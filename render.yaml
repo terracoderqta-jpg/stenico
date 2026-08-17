@@ -3,8 +3,7 @@ services:
     name: stenico-backend
     runtime: image
     image:
-      url: ./backend/Dockerfile
-    dockerContext: .
+      url: ./Dockerfile
     disk:
       name: stenico-data
       mountPath: /data
@@ -12,5 +11,3 @@ services:
     envVars:
       - key: SQLITE_DB_PATH
         value: /data/stenico.db
-      - key: CORS_ORIGINS
-        sync: false
