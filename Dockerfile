@@ -1,11 +1,6 @@
-FROM eclipse-temurin:21-jdk AS build
-WORKDIR /app
-COPY backend/ backend/
-RUN cd backend && sed -i 's/\r$//' mvnw && chmod +x mvnw && ./mvnw -q -DskipTests package
-
 FROM eclipse-temurin:21-jre
 WORKDIR /app
-COPY --from=build /app/backend/target/backend-0.0.1-SNAPSHOT.jar app.jar
+COPY backend/target/backend-0.0.1-SNAPSHOT.jar app.jar
 ENV SQLITE_DB_PATH=/data/stenico.db
 ENV JAVA_OPTS="-Xmx256m"
 EXPOSE 8080
