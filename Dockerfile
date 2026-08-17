@@ -1,9 +1,6 @@
 FROM eclipse-temurin:21-jdk AS build
 WORKDIR /app
-COPY backend/mvnw backend/mvnw
-COPY backend/.mvn backend/.mvn
-COPY backend/pom.xml backend/pom.xml
-COPY backend/src backend/src
+COPY backend/ backend/
 RUN cd backend && sed -i 's/\r$//' mvnw && chmod +x mvnw && ./mvnw -q -DskipTests package
 
 FROM eclipse-temurin:21-jre
