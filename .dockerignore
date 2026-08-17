@@ -1,0 +1,8 @@
+frontend
+.idea
+.git
+target
+node_modules
+*.db
+*.log
+.vscode
