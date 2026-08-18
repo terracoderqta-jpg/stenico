@@ -19,11 +19,8 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                String[] origins = Arrays.stream(corsOrigins.split(","))
-                        .map(String::trim)
-                        .toArray(String[]::new);
-                registry.addMapping("/api/**")
-                        .allowedOrigins(origins)
+                registry.addMapping("/**")
+                        .allowedOrigins("*")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*");
             }
