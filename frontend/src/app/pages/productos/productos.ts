@@ -172,7 +172,7 @@ export class ProductosComponent implements OnInit {
         const p: Producto = {
           codigo: c[0],
           nombre: c[1] ?? '',
-          stock: 0,
+          stock: this.parseInt(c[9]) ?? 0,
           precio: this.parseInt(c[8]) ?? 0,
         };
         if (c[2]) {
@@ -193,7 +193,7 @@ export class ProductosComponent implements OnInit {
         if (c[7]) {
           p.ancho = this.parseInt(c[7]) ?? undefined;
         }
-        const rev = this.parseInt(c[9]);
+        const rev = this.parseInt(c[10]);
         if (rev != null) {
           p.precioRevendedor = rev;
         }
