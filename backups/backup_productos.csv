@@ -1,0 +1,281 @@
+﻿codigo;nombre;marca;categoria;subcategoria;voltaje;largo;ancho;precio;precioRevendedor;stock
+0092M67000;BTZ7S;Bosch;Baterías;Moto;;;;592376;;50
+0092M67004;BB16CL-B;Bosch;Baterías;Moto;;;;1651587;;50
+0092M67041;BTX4L;Bosch;Baterías;Moto;;;;417364;;50
+0092M67042;BTX5L;Bosch;Baterías;Moto;;;;451891;;50
+0092M67044;BTX7A;Bosch;Baterías;Moto;;;;625661;;50
+0092M67045;BTX7L;Bosch;Baterías;Moto;;;;585125;;50
+0092M67046;BTX9;Bosch;Baterías;Moto;;;;815522;;50
+0092M67047;BTX12;Bosch;Baterías;Moto;;;;1043874;;50
+0092M67048;BTX14;Bosch;Baterías;Moto;;;;1200639;;50
+0092M67053;B4L-B;Bosch;Baterías;Moto;;;;42287;;50
+0092M67054;BB5LB;Bosch;Baterías;Moto;;;;350433;;50
+0092M67055;BB7LB;Bosch;Baterías;Moto;;;;600178;;50
+0092M67056;BT12B;Bosch;Baterías;Moto;;;;0;;50
+0092M67057;BN9-4B1;Bosch;Baterías;Moto;;;;769779;;50
+0092M67058;BB7-A;Bosch;Baterías;Moto;;;;737391;;50
+1100;Z-45D;Moura;Baterías;Auto;;;;93300;;50
+1101;Z-65D;Moura;Baterías;Auto;;;;111000;;50
+1102;Z-75D;Moura;Baterías;Auto;;;;137000;;50
+1103;MA80CD;Moura;Baterías;Auto;;;;621300;;50
+1104;ME80CD;Moura;Baterías;Auto;;;;281000;;50
+2/1/006,BJ;12/75-78w;Jalit;Baterías;;;;;135000;;50
+2/1/010,BJ;12/200-174a;Jalit;Baterías;;;;;373000;;50
+2/1/024,BJ;6/160-63a;Jalit;Baterías;;;;;155400;;50
+2/1/038,BJ;12/55-54w;Jalit;Baterías;;;;;105000;;50
+2/1/039,BJ;12/65-66w;Jalit;Baterías;;;;;120000;;50
+2/1/040,BJ;12/120-90a;Jalit;Baterías;;;;;195000;;50
+2/1/101,BJ;12/24-48t;Jalit;Baterías;;;;;132000;;50
+2/1/104,BJ;12/75-72w;Jalit;Baterías;;;;;130000;;50
+2/1/105,BJ;12/75-78w;Jalit;Baterías;;;;;150000;;50
+2/1/110,BJ;12/70-78w;Jalit;Baterías;;;;;142000;;50
+2/1/111,BJ;12/48-54w;Jalit;Baterías;;;;;108900;;50
+2/1/112,BJ;12/80-90w;Jalit;Baterías;;;;;210000;;50
+2/1/116,BJ;12/160-138a;Jalit;Baterías;;;;;289000;;50
+2/1/117,BJ;12/50-60w;Jalit;Baterías;;;;;117000;;50
+2/1/118,BJ;12/180-150a;Jalit;Baterías;Auto;;;;324000;;50
+2/1/119,BJ;12/65-66w;Jalit;Baterías;;;;;127000;;50
+2/1/120,BJ;12/100-102w;Jalit;Baterías;;;;;189000;;50
+2/1/121,BJ;12/110-90a;Jalit;Baterías;;;;;210000;;50
+2/1/122,BJ;12/75A-90w;Jalit;Baterías;;;;;170000;;50
+2/1/123,BJ;12/35-48h;Jalit;Baterías;;;;;136000;;50
+2/1/124,BJ;12/90-90w;Jalit;Baterías;;;;;210000;;50
+2/1/128,BJ;12/45-60h;Jalit;Baterías;;;;;149700;;50
+24 - AES;24 - AES;Trojan;Baterías;;12;274;174;0;;50
+24M5;24M5;Deka;Baterías;;12;273;171;0;;50
+24M7;24M7;Deka;Baterías;;12;273;171;0;;50
+27 TMX;27 TMX;Trojan;Baterías;;12;324;168;0;;50
+27M6;27M6;Deka;Baterías;;12;318;171;0;;50
+31 - AES;31 - AES;Trojan;Baterías;;12;325;173;0;;50
+3301;MF60AD;Moura;Baterías;Auto;;;;397500;;50
+3302;MF72LD;Moura;Baterías;Auto;;;;419100;;50
+3303;M40FD;Moura;Baterías;Auto;;;;136500;;50
+3304;MF80CD;Moura;Baterías;Auto;;;;451300;;50
+3309;M22GD;Moura;Baterías;Auto;;;;176300;;50
+3310;M22GI;Moura;Baterías;Auto;;;;184739;;50
+3311;M28KI;Moura;Baterías;Auto;;;;236308;;50
+3312;ME135BD;Moura;Baterías;Auto;;;;354056;;50
+3314;M18FD;Moura;Baterías;Auto;;;;160600;;50
+3315;M95QD;Moura;Baterías;Auto;;;;318800;;50
+3318;M22RD;Moura;Baterías;Auto;;;;275700;;50
+3319;M22RI;Moura;Baterías;Auto;;;;314900;;50
+3321;M22ED;Moura;Baterías;Auto;;;;164300;;50
+3323;M26AD;Moura;Baterías;Auto;;;;188196;;50
+3324;M26AI;Moura;Baterías;Auto;;;;201102;;50
+3350;M22JD;Moura;Baterías;Auto;;;;187600;;50
+3351;ME180BD;Moura;Baterías;Auto;;;;468900;;50
+3352;ME220PD;Moura;Baterías;Auto;;;;734600;;50
+3354;ME23UI;Moura;Baterías;Auto;;;;160800;;50
+3360;M30LD;Moura;Baterías;Auto;;;;231640;;50
+3361;M30LI;Moura;Baterías;Auto;;;;247445;;50
+3370;M20GD;Moura;Baterías;Auto;;;;156700;;50
+3371;M24KD;Moura;Baterías;Auto;;;;186399;;50
+3376;ME90TD;Moura;Baterías;Auto;;;;309625;;50
+3377;M18SD;Moura;Baterías;Auto;;;;158800;;50
+4U1L;4U1L;Deka;Baterías;;12;197;130;0;;50
+711 - 712;NAFTERO COMUN;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+714 - 715;GASOLERO COMUN;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+716 - 717;GASOLERO REFORZADO;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+718 - 719;GASOLERO SUP. REFOR.;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+720 - 721;MARIPOSA NAFTERO;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+723 - 724;MARIPOSA GASOLERO;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+725;ESTAÑADO P/ SOLDAR 16 - 25;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+726;ESTAÑADO P/ SOLDAR 35 - 50;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+727;ESTAÑADO P/ SOLDAR 50 - 70;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+728;ESTAÑADO P/ SOLDAR 90;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+730;PUNTERA COBRE 25 mm;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+731;PUNTERA COBRE 35 mm;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+732;PUNTERA COBRE 50 mm;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+733;PUNTERA COBRE 90 mm;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+735;PUNTERA ESTAÑADA 25 mm;;TERMINALES DE EMERGENCIAS;TERMINALES DE EMERGENCIAS;;;;0;;50
+736;PUNTERA ESTAÑADA 35 mm;;TERMINALES DE EMERGENCIAS;;;;;0;;50
+737;PUNTERA ESTAÑADA 50 mm;;TERMINALES DE EMERGENCIAS;;;;;0;;50
+738;PUNTERA ESTAÑADA 90 mm;;TERMINALES DE EMERGENCIAS;;;;;0;;50
+741;BULON CON TUERCA;;TERMINALES DE EMERGENCIAS;;;;;0;;50
+750 - 751;UNIVERSAL C/ TORNILLO NAF.;;TERMINALES DE EMERGENCIAS;;;;;0;;50
+752 - 753;UNIVERSAL C/ TORNILLO GAS.;;TERMINALES DE EMERGENCIAS;;;;;0;;50
+760;ESPECIAL DE PLOMO;;TERMINALES DE EMERGENCIAS;;;;;0;;50
+8A31DTM;8A31DTM;Deka;Baterías;;12;329;171;0;;50
+8AU1;8AU1;Deka;Baterías;;12;197;130;0;;50
+8U1L;8U1L;Deka;Baterías;;12;197;130;0;;50
+9A34M;9A34M;Deka;Baterías;;12;273;175;0;;50
+B100EP;12X100;Pioneiro;Baterías;;12;330;173;0;;50
+B180EX;12x180;Pioneiro;Baterías;;12;510;215;0;;50
+DP31DT;DP31DT;Deka;Baterías;;12;330;171;0;;50
+EFB60D;L2;Pioneiro;Baterías;;24;241;175;0;;50
+EFB72D;L3;Pioneiro;Baterías;;24;277;175;0;;50
+EFB95D;L5;Pioneiro;Baterías;;24;353;175;0;;50
+EP300;300w;;Arrancador;Arrancador;;;;0;;50
+EP600;600w;;Arrancador;Arrancador;;;;0;;50
+ETX14;ETX14;Deka;Baterías;;12;150;88;0;;50
+ETX20L;ETX20L;Deka;Baterías;;12;175;88;0;;50
+ETX30LA;ETX30LA;Deka;Baterías;;12;168;131;0;;50
+F100DS;12X100;Pioneiro;Baterías;;12;353;175;0;;50
+F110E;12X110;Pioneiro;Baterías;;12;330;173;0;;50
+F150DX;12X180;Pioneiro;Baterías;;12;510;215;0;;50
+F180D;12X180 REF;Pioneiro;Baterías;;12;510;215;0;;50
+F200D;12X200;Pioneiro;Baterías;;12;527;283;0;;50
+F225PD/PE;12X220;Pioneiro;Baterías;;12;517;274;0;;50
+F40DP;12X45;Pioneiro;Baterías;;12;207;175;0;;50
+F42DF;12X40 H FIT;Pioneiro;Baterías;;18;197;129;0;;50
+F45D;12X45;Pioneiro;Baterías;;18;207;175;0;;50
+F50D;12X65;Pioneiro;Baterías;;12;242;175;0;;50
+F52DC;12X50 H CIVIC;Pioneiro;Baterías;;18;238;129;0;;50
+F52EC;12x50 H CIVIC;Pioneiro;Baterías;;18;238;129;0;;50
+F52GD;12X50;Pioneiro;Baterías;;24;207;175;0;;50
+F60DG;12X65 REF;Pioneiro;Baterías;;24;242;175;0;;50
+F60DX;12X65 ALTA;Pioneiro;Baterías;;24;242;175;0;;50
+F60EG;12X65 REF IZQ;Pioneiro;Baterías;;24;242;175;0;;50
+F65GD;12X70 ALTA;Pioneiro;Baterías;;24;242;175;0;;50
+F65HD;12X65 SUV;Pioneiro;Baterías;;18;260;173;0;;50
+F65HE;12X65 SUV;Pioneiro;Baterías;;18;260;173;0;;50
+F70D;12X75;Pioneiro;Baterías;;12;282;175;0;;50
+F70DG;12X75 REF;Pioneiro;Baterías;;18;282;175;0;;50
+F75DX;12X75 ALTA;Pioneiro;Baterías;;18;282;175;0;;50
+F75HD;12X85 HILUX;Pioneiro;Baterías;;18;260;173;0;;50
+F75HE;12X85 HILUX IZ;Pioneiro;Baterías;;18;260;173;0;;50
+F75PD;12X80;Pioneiro;Baterías;;18;296;175;0;;50
+F90CD/CE;12X90 HILUX;Pioneiro;Baterías;;18;306;173;0;;50
+FER02785;2032 PILA ESP.CONTROL;;PILAS;;;;;0;;50
+FER02790;A-23 PILA ESP. CONTROL O A23;;PILAS;;;;;0;;50
+FER02791;A-27 PILA ESP. CONTROL O A27;;PILAS;;;;;0;;50
+FER02794;2016 PILA ESP. CONTROL;;PILAS;;;;;0;;50
+FER02797;1620 PILA ESP. CONTROL ENERGIZER;;PILAS;;;;;0;;50
+FER02799;2430 PILA ESP. CONTROL ENERGIZER;;PILAS;;;;;0;;50
+FER02800;2450 PILA ESP. CONTROL ENERGIZER;;PILAS;;;;;0;;50
+J - 305 AES;J - 305 AES;Trojan;Baterías;;6;296;176;0;;50
+J 305 G - AC;J 305 G - AC;Trojan;Baterías;;6;311;178;0;;50
+J 305 P - AC;J 305 P - AC;Trojan;Baterías;;6;296;176;0;;50
+JF460;BATERÍA-ARRANQUE-ALTERNADOR-REGULADOR;;Probador;Probador;;;;0;;50
+JF600;BATERÍA-ARRANQUE-ALTERNADOR-REGULADOR C/CONCCIÓN A CELULAR;;Probador;Probador;;;;0;;50
+L - 16 AES;L - 16 AES;Trojan;Baterías;;6;296;176;0;;50
+L 16 E - AC;L 16 E - AC;Trojan;Baterías;;6;311;178;0;;50
+L 16 G - AC;L 16 G - AC;Trojan;Baterías;;6;311;178;0;;50
+L 16 H - AC;L 16 H - AC;Trojan;Baterías;;6;396;176;0;;50
+LI – 105 F;LI – 105 F;LiOn;Baterías;;6;262;181;0;;50
+LI – 1275 F;LI – 1275 F;LiOn;Baterías;;12;329;181;0;;50
+LI – 16 F;LI – 16 F;LiOn;Baterías;;6;313;174;0;;50
+LI – 305 F;LI – 305 F;LiOn;Baterías;;6;314;174;0;;50
+LI – 875 F;LI – 875 F;LiOn;Baterías;;8;261;180;0;;50
+LI12100;12V 100A/H;;Baterías de Litio;Baterías de Litio;;;;0;;50
+LI1230;12V 30A/H;;Baterías de Litio;Baterías de Litio;;;;0;;50
+LI2410;24V 12A/H;;Baterías de Litio;Baterías de Litio;;;;0;;50
+LI3610;36V 12A/H;;Baterías de Litio;Baterías de Litio;;;;0;;50
+LI4810;48V 12A/H;;Baterías de Litio;Baterías de Litio;;;;0;;50
+MB10U;MB10U;Motobatt;Baterías;;;135;90;0;;50
+MB12U;MB12U;Motobatt;Baterías;;;135;80;0;;50
+MB16A;MB16A;Motobatt;Baterías;;;151;91;0;;50
+MB16AU;MB16AU;Motobatt;Baterías;;;207;72;0;;50
+MB16U;MB16U;Motobatt;Baterías;;;160;90;0;;50
+MB18U;MB18U;Motobatt;Baterías;;;180;90;0;;50
+MB2.5U;MB2.5U;Motobatt;Baterías;;;80;70;0;;50
+MB3U;MB3U;Motobatt;Baterías;;;98;56;0;;50
+MB5.5U;MB5.5U;Motobatt;Baterías;;;135;60;0;;50
+MB51814;MB51814;Motobatt;Baterías;;;186;82;0;;50
+MB5U;MB5U;Motobatt;Baterías;;;120;60;0;;50
+MB7BB;MB7BB;Motobatt;Baterías;;;150;60;0;;50
+MB7U;MB7U;Motobatt;Baterías;;;151;65;0;;50
+MB9U;MB9U;Motobatt;Baterías;;;136;76;0;;50
+MBHD12H;MBHD12H;Motobatt;Baterías;;;200;130;0;;50
+MBR 10 BS;YTZ10-S;Pioneiro;Baterías;Moto;12;150;87;547042;;50
+MBR 11 VP;YTX12-BS;Pioneiro;Baterías;Moto;12;150;87;686756;;50
+MBR 12 LVP;YT12A-BS;Pioneiro;Baterías;Moto;12;150;87;642633;;50
+MBR 14 BS;YTX14L-BS;Pioneiro;Baterías;Moto;12;150;87;740568;;50
+MBR 16 LBS;YTX16-BS;Pioneiro;Baterías;Moto;12;150;87;848398;;50
+MBR 18 BS;YTX20L-BS;Pioneiro;Baterías;Moto;12;175;87;991462;;50
+MBR 28 LBS;YTX30L-BS;Pioneiro;Baterías;Moto;12;166;126;1691258;;50
+MBR 4 BS;YTX4L-BS;Pioneiro;Baterías;Moto;12;113;70;272742;;50
+MBR 5 BS;YTX5L-BS;Pioneiro;Baterías;Moto;12;113;70;242069;;50
+MBR 5VP;12N5-3B;Pioneiro;Baterías;Moto;12;120;61;308104;;50
+MBR 6 BS;YTZ7S;Pioneiro;Baterías;Moto;12;113;70;294151;;50
+MBR 7 BS;YTX7L-BS;Pioneiro;Baterías;Moto;12;113;70;339202;;50
+MBR 8 VP;YTX9-BS;Pioneiro;Baterías;Moto;12;150;87;41793;;50
+MBR 9 AYS;12N9-4;Pioneiro;Baterías;Moto;12;135;75;429114;;50
+MBR7 ABS;YTX7A-BS;Pioneiro;Baterías;Moto;12;150;87;376387;;50
+MBT14B4;MBT14B4;Motobatt;Baterías;;;150;70;0;;50
+MBT4BB;MBT4BB;Motobatt;Baterías;;;113;38;0;;50
+MBT6N4;MBT6N4;Motobatt;Baterías;;;71;71;0;;50
+MBT6N6;MBT6N6;Motobatt;Baterías;;;97;56;0;;50
+MBT9B4;MBT9B4;Motobatt;Baterías;;;150;70;0;;50
+MBTX12U MBTX12UHD;MBTX12U MBTX12UHD;Motobatt;Baterías;;;151;87;0;;50
+MBTX14AU;MBTX14AU;Motobatt;Baterías;;;135;90;0;;50
+MBTX16U;MBTX16U;Motobatt;Baterías;;;151;87;0;;50
+MBTX24U;MBTX24U;Motobatt;Baterías;;;205;87;0;;50
+MBTX4U;MBTX4U;Motobatt;Baterías;;;114;70;0;;50
+MBTX7ABS;MBTX7ABS;Motobatt;Baterías;;;151;87;0;;50
+MBTX7U;MBTX7U;Motobatt;Baterías;;;114;70;0;;50
+MBTX9U MBTX9UHD;MBTX9U MBTX9UHD;Motobatt;Baterías;;;151;87;0;;50
+MBTZ10S;MBTZ10S;Motobatt;Baterías;;;151;87;0;;50
+MBTZ14S;MBTZ14S;Motobatt;Baterías;;;151;87;0;;50
+MBTZ7S;MBTZ7S;Motobatt;Baterías;;;114;70;0;;50
+MBU1-9;MBU1-9;Motobatt;Baterías;;;195;130;0;;50
+MH51814;MH51814;Motobatt;Baterías;;;186;82;0;;50
+MHT12B4;MHT12B4;Motobatt;Baterías;;;150;70;0;;50
+MHTX16;MHTX16;Motobatt;Baterías;;;151;87;0;;50
+MHTX20;MHTX20;Motobatt;Baterías;;;175;87;0;;50
+MHTX30;MHTX30;Motobatt;Baterías;;;166;126;0;;50
+MHTZ14S;MHTZ14S;Motobatt;Baterías;;;149;84;0;;50
+MP 12 - 12;MP 12 - 12;Maxton;Baterías;;12;151;98;0;;50
+MP 12 - 18;MP 12 - 18;Maxton;Baterías;;12;181;76;0;;50
+MP 12 - 20;MP 12 - 20;Maxton;Baterías;;12;181;76;0;;50
+MP 12 - 26;MP 12 - 26;Maxton;Baterías;;12;166;175;0;;50
+MP 12 - 45;MP 12 - 45;Maxton;Baterías;;12;197;166;0;;50
+MP 12 - 55;MP 12 - 55;Maxton;Baterías;;12;230;138;0;;50
+MP 12 - 711;MP 12 - 711;Maxton;Baterías;;12;151;65;0;;50
+MP 12 - 9;MP 12 - 9;Maxton;Baterías;;12;151;65;0;;50
+MP 12 – 17;MP 12 – 17;Maxton;Baterías;;12;181;76;0;;50
+MP 12 – 4,5;MP 12 – 4,5;Maxton;Baterías;;12;90;70;0;;50
+MP 12 – 7D;MP 12 – 7D;Maxton;Baterías;;12;151;65;0;;50
+MP 12- 6;MP 12- 6;Maxton;Baterías;;12;151;51;0;;50
+MP 12-30D;MP 12-30D;Maxton;Baterías;;12;166;125;0;;50
+MP 6 - 4;MP 6 - 4;Maxton;Baterías;;6;70;47;0;;50
+MP 6 2,8;MP 6 2,8;Maxton;Baterías;;6;66;33;0;;50
+MP L X K T M 1 6;MP L X K T M 1 6;Motobatt;Baterías;;;904;92;0;;50
+MPE 12 - 100;MPE 12 - 100;Maxton;Baterías;;12;330;173;0;;50
+MPE 12 - 150;MPE 12 - 150;Maxton;Baterías;;12;300;280;0;;50
+MPE 12 - 225;MPE 12 - 225;Maxton;Baterías;;12;522;240;0;;50
+MPE 12 - 250;MPE 12 - 250;Maxton;Baterías;;12;520;268;0;;50
+MPE 12 - 275;MPE 12 - 275;Maxton;Baterías;;12;520;268;0;;50
+MPE 12 - 33;MPE 12 - 33;Maxton;Baterías;;12;195;130;0;;50
+MPE 12 - 75;MPE 12 - 75;Maxton;Baterías;;12;258;166;0;;50
+MPE 6 - 10;MPE 6 - 10;Maxton;Baterías;;6;151;50;0;;50
+MPE 6 - 225;MPE 6 - 225;Maxton;Baterías;;6;243;188;0;;50
+MPEV 6 - 225;MPEV 6 - 225;Maxton;Baterías;;6;260;188;0;;50
+MPEV 8 - 170;MPEV 8 - 170;Maxton;Baterías;;8;260;180;0;;50
+MPL X H K - P;MPL X H K - P;Motobatt;Baterías;;;107;49;0;;50
+MPLX4.5HP;MPLX4.5HP;Motobatt;Baterías;;;114;70;0;;50
+MPLX6.0HP;MPLX6.0HP;Motobatt;Baterías;;;114;70;0;;50
+MPLX7U;MPLX7U;Motobatt;Baterías;;;114;70;0;;50
+MT2.5L;MT2.5L;Motobatt;Baterías;;;81;77;0;;50
+MTB12B4;MTB12B4;Motobatt;Baterías;;;150;70;0;;50
+MTR4;MTR4;Motobatt;Baterías;;;114;49;0;;50
+MTX3L;MTX3L;Motobatt;Baterías;;;98;56;0;;50
+MTX5AL;MTX5AL;Motobatt;Baterías;;;120;60;0;;50
+MTX5L;MTX5L;Motobatt;Baterías;;;114;70;0;;50
+MTX6.5L;MTX6.5L;Motobatt;Baterías;;;138;66;0;;50
+MTX7A;MTX7A;Motobatt;Baterías;;;151;87;0;;50
+MTX7B;MTX7B;Motobatt;Baterías;;;150;65;0;;50
+MTX7C;MTX7C;Motobatt;Baterías;;;135;76;0;;50
+MTX7CL;MTX7CL;Motobatt;Baterías;;;135;76;0;;50
+MTX7D;MTX7D;Motobatt;Baterías;;;149;60;0;;50
+MTX7DL;MTX7DL;Motobatt;Baterías;;;149;60;0;;50
+MTX7L;MTX7L;Motobatt;Baterías;;;114;70;0;;50
+MTX9;MTX9;Motobatt;Baterías;;;137;76;0;;50
+MTX9A;MTX9A;Motobatt;Baterías;;;151;87;0;;50
+MTZ5S;MTZ5S;Motobatt;Baterías;;;113;70;0;;50
+MTZ6S;MTZ6S;Motobatt;Baterías;;;114;70;0;;50
+PR1210;12V 10A;;Cargador;Cargador;;;;0;;50
+PR1220;12V 20A;;Cargador;Cargador;;;;0;;50
+PR1230;12V 30A;;Cargador;Cargador;;;;0;;50
+PR2410;24V 10A;;Cargador;Cargador;;;;0;;50
+PR3606;36V 6A;;Cargador;Cargador;;;;0;;50
+PR4804;48V 4A;;Cargador;Cargador;;;;0;;50
+PR6003;60V 3A;;Cargador;Cargador;;;;0;;50
+S - 1275;S - 1275;Trojan;Baterías;;12;327;181;0;;50
+S - 875;S - 875;Trojan;Baterías;;8;260;181;0;;50
+SPRE 06 - 255;SPRE 06 - 255;Trojan;Baterías;;6;262;181;0;;50
+T - 105;T - 105;Trojan;Baterías;;6;262;181;0;;50
+T - 105 AES;T - 105 AES;Trojan;Baterías;;6;262;179;0;;50
+T - 1275;T - 1275;Trojan;Baterías;;12;327;181;0;;50
+T - 1275 AES;T - 1275 AES;Trojan;Baterías;;12;329;179;0;;50
+T - 875;T - 875;Trojan;Baterías;;8;260;181;0;;50
